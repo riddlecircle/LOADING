@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOADING</title>
+    <!-- アイコン読み込み -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">LOADING</div>
+      <div class="header-list">
+        <ul>
+          <li><span id="modalopen3" class="clickon">お問い合わせ</span></li>
+          <li><span id="modalopen2" class="clickon">解説</span></li>
+          <li><span id="modalopen" class="modalopen clickon">ヒント</span></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <!--プログレスバー-->
+      <div id="prog_bar">
+        <div class="prog_bar">
+          <h2><span id="progNum">0</span>%</h2>
+          <progress id="prog" max="100" value="0"></progress>
+          <h2>Now Loading</h2>
+        </div>
+      </div>
+      <!-- ここまでプログレスバー -->
+      <!-- 問題1 -->
+      <div id="contents" class="loaded">
+        <div class="contentsItem item1 contentsLeft contentsRed">
+          <span class="conItem conItem1"></span>
+        </div>
+        <div class="contentsItem item1 contentsCenter">
+          <span class="conItem conItem2"></span>
+        </div>
+        <div class="contentsItem item1 contentsRight">
+          <span class="conItem conItem3"></span>
+        </div>
+      </div>
+      <!-- 問題2 -->
+      <div id="countdowns" class="escape">
+        <span id="countNum">26</span>
+      </div>
+      <!-- 問題3 -->
+      <div id="nazo3" class="escape">
+        <div id="nazo3Item" class="nazo3Item">
+          <span>OFF</span><span>??</span>
+        </div>
+      </div>
+      <!-- 問題4 -->
+      <div id="contents2" class="escape">
+        <div class="contentsItem item1">
+          <span class="contentsLeft2 contentsRed2">1</span>
+        </div>
+        <div class="contentsItem item1">
+          <span class="contentsCenter2">3</span>
+        </div>
+        <div class="contentsItem item1">
+          <span class="contentsRight2">6</span>
+        </div>
+      </div>
+      <!-- 問題5 -->
+      <div id="nazoL" class="escape">
+        <div class="spinner"></div>
+      </div>
+      <!-- 解答フォーム -->
+      <form name="f" action="">
+        <input class="formIn" name="form_nazo1" type="text" /><input
+          id="formSend"
+          class="form_send"
+          type="button"
+          value="OK"
+          onclick="answer1()"
+        />
+      </form>
+      <!-- モーダルエリアここから -->
+      <section id="modalArea" class="modalArea">
+        <div id="modalBg" class="modalBg"></div>
+        <div class="modalWrapper">
+          <div class="modalContents">
+            <h1 id="hinttitle">ヒントを見ますか？</h1>
+            <p id="hinttext">
+              下のボタンをクリックしてヒントを見ることができます。<br />
+              右上の「×」をクリックすると、問題に戻ることができます。
+            </p>
+          </div>
+          <div>
+            <a id="hint1" class="hintbtn clickon">ヒント1</a>
+            <a id="hint2" class="hintbtn clickon" rel="noreferrer noopener"
+              >ヒント2</a
+            >
+            <a id="hint3" class="hintbtn clickon">ヒント3</a>
+          </div>
+          <div id="closeModal" class="closeModal">×</div>
+        </div>
+      </section>
+      <!-- モーダルエリアここまで -->
+    </main>
+    <footer>
+      <div class="select">
+        <a class="select-item clickon" id="select1" onclick="skip1()">Q1</a>
+        <a class="select-item out" id="select2">Q2</a>
+        <a class="select-item out" id="select3">Q3</a>
+        <a class="select-item out" id="select4">Q4</a>
+        <a class="select-item out" id="select5">Q5</a>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

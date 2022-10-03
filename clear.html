@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOADING</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="clearstyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="mainContents">
+        <section class="circleBox">
+          <div class="item itemL grayItem escape">L</div>
+          <div class="item itemO grayItem escape">O</div>
+          <div class="item itemA grayItem escape">A</div>
+          <div class="item itemD grayItem escape">D</div>
+          <div class="item itemI grayItem escape">I</div>
+          <div class="item itemN grayItem escape">N</div>
+          <div class="item itemG grayItem escape">G</div>
+        </section>
+        <section class="clearMessage fadeUp">
+          <div class="C"><span>C</span></div>
+          <div class="L"><span>L</span></div>
+          <div class="E"><span>E</span></div>
+          <div class="A"><span>A</span></div>
+          <div class="R"><span>R</span></div>
+        </section>
+      </div>
+      <div>
+        <section class="tweet">
+          <p>以下よりクリアツイートできます。</p>
+          <a
+            href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+            class="twitter-share-button"
+            data-show-count="false"
+            data-size="large"
+            deta-text="「LOADING」をクリアした！"
+            deta-url="#"
+            data-hashtags="LOADING謎"
+          ></a>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <div class="mondai">what's your answer?</div>
+        <!-- 解答フォーム -->
+        <form name="f" action="">
+          <input class="formIn" name="form_nazo1" type="text" /><input
+            id="formSend"
+            class="form_send"
+            type="button"
+            value="OK"
+            onclick="allclear()"
+          />
+        </form>
+        <div>
+          <section class="tweet loaded">
+            <p>以下よりオールクリアしたことを共有できます。</p>
+            <a
+              href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+              class="twitter-share-button"
+              data-show-count="false"
+              data-size="large"
+              deta-text="「LOADING」の全ての謎を解き明かした！"
+              deta-url="#"
+              data-hashtags="LOADING謎"
+            ></a>
+          </section>
+        </div>
+      </div>
+    </footer>
+    <script src="clear.js"></script>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 下から */
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.escape {
+  display: none;
+}
+
+.blackItem {
+  background-color: #333;
+  color: white;
+}
+
+.grayItem {
+  background-color: lightgray;
+}
+
+.redItem {
+  background-color: tomato;
+  color: white;
+}
+
+.mainContents {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+}
+.circleBox {
+  height: 200px;
+  width: 320px;
+  position: relative;
+  margin: 0 auto;
+}
+div.item {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.clearMessage {
+  position: absolute;
+  width: 100%;
+  padding-top: 150px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.clearMessage div {
+  height: 100px;
+  width: 100px;
+  margin: 0 20px;
+  border: 2px solid black;
+  float: left;
+}
+
+.clearMessage span {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  font-size: 80px;
+}
+
+.L {
+  transform: rotate(45deg);
+}
+
+.L span {
+  display: block;
+  transform: rotate(-45deg);
+}
+
+.tweet {
+  text-align: center;
+}
+
+p {
+  margin: 10px;
+}
+
+/* 解答入力用 */
+input {
+  padding: 10px 15px;
+  line-height: 50px;
+  margin: 30px 0;
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.form_send {
+  border-left: none;
+  background-color: lightgray;
+  cursor: pointer;
+}
+footer {
+  margin-top: 50px;
+  padding: 150px 80px;
+  height: 200px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+footer div {
+  text-align: center;
+}
+
+.mondai {
+  font-size: 20px;
+}

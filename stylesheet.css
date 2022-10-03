@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  /* max-width: 1170px; */
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  letter-spacing: 5px;
+}
+
+#title {
+  font-size: 50px;
+  padding: 50px 0;
+}
+
+.content {
+  font-weight: normal;
+  padding-bottom: 50px;
+  letter-spacing: 2.5px;
+  line-height: 30px;
+}
+
+.content a {
+  margin-top: 10px;
+}
+
+strong {
+  color: tomato;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  opacity: 0.7;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.start {
+  padding: 30px 100px;
+  margin: 100px 0 150px 0;
+  font-size: 40px;
+  line-height: 40px;
+  color: white;
+  background-color: black;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.twitter {
+  padding: 8px 24px;
+  color: white;
+  background-color: #55acee;
+}
+
+.bottom {
+  padding: 10px 0;
+  color: white;
+  background-color: black;
+  opacity: 0.7;
+}
+
+/* ------問題画面用-------------- */
+
+header {
+  height: 90px;
+  background-color: teal;
+  color: white;
+}
+
+.header-logo {
+  font-size: 36px;
+  float: left;
+  padding: 20px 40px;
+}
+
+.header-list {
+  padding: 0 100px;
+}
+
+li {
+  list-style: none;
+}
+
+.header-list li {
+  float: right;
+  padding: 33px 20px;
+}
+
+main {
+  padding: 100px 80px;
+  height: 400px;
+}
+
+footer {
+  height: 70px;
+  padding: 40px;
+  background-color: teal;
+  color: white;
+}
+
+.footer-list {
+  padding: 30px 0;
+}
+
+.select {
+  height: 60px;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.select-item {
+  color: black;
+  float: left;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 10px;
+}
+
+/*-------プログレスバーの設定----------*/
+progress {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 20px;
+  border-width: 2px;
+  border-style: solid;
+  margin: 18px;
+}
+::-webkit-progress-bar {
+  background-color: gray;
+}
+::-webkit-progress-value {
+  background-color: aqua;
+}
+
+#prog_bar {
+  height: 100vh; /* 全画面表示 */
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.prog_bar {
+  padding-top: 30vh;
+}
+
+/* ロード完了したら消える */
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+/*----------ここまでプログレスバー----------*/
+
+/* 非表示 */
+.escape {
+  display: none;
+}
+
+/* 謎1の表示 */
+#contents {
+  height: 200px;
+  width: 725px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.contentsItem {
+  height: 150px;
+  width: 150px;
+  margin: 0 40px;
+  border: 2px solid black;
+  float: left;
+  position: relative;
+}
+
+.contentsItem span {
+  font-size: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+
+.contentsRed {
+  background-color: tomato;
+}
+
+/* 謎1ここまで--------- */
+
+/* 謎2の表示 */
+#countdowns {
+  height: 200px;
+  width: 725px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+#countNum {
+  font-size: 150px;
+}
+/* 謎2ここまで---------- */
+
+/* 謎3の表示 */
+#nazo3 {
+  height: 200px;
+  width: 725px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.nazo3Item {
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  width: 70px;
+  height: 50px;
+  padding: 10px 15px;
+  line-height: 50px;
+  margin: 40px auto 0 auto;
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+  background-color: lightgray;
+  /*アニメーションの指定*/
+  transition: ease 0.2s;
+}
+
+.nazo3Item span {
+  /*絶対配置でテキストの位置を決める*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /*ブロック要素にしてテキスト折り返しなし*/
+  display: block;
+  z-index: 3; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+}
+
+/*差し替わるテキストの設定*/
+.nazo3Item span:nth-child(2) {
+  opacity: 0; /*透過0に*/
+  color: white;
+  transform: scale(-1, -1);
+  top: 15%;
+  left: 28%;
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.nazo3Item:hover span:nth-child(1) {
+  opacity: 0; /*透過0に*/
+}
+
+.nazo3Item:hover span:nth-child(2) {
+  opacity: 1; /*不透明に*/
+}
+
+.nazo3Item:hover {
+  background-color: tomato;
+}
+
+/* 謎3ここまで---------- */
+
+/* 謎4用---------- */
+#contents2 {
+  height: 200px;
+  width: 725px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.contentsRed2 {
+  color: tomato;
+}
+/* 謎4ここまで------------ */
+/* 謎5用------------ */
+#nazoL {
+  height: 200px;
+  width: 725px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border: 6px gray solid;
+  border-top: 4px aqua solid;
+  border-radius: 50%;
+  animation: sp-anime 1s infinite linear;
+}
+
+@keyframes sp-anime {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* 謎5ここまで------------- */
+/* 解答入力用 */
+input {
+  padding: 10px 15px;
+  line-height: 50px;
+  margin-top: 30px;
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.form_send {
+  border-left: none;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+/* skip用 */
+.clickon {
+  cursor: pointer;
+}
+
+.out {
+  background-color: gray;
+}
+
+/* モーダルCSS */
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 300px;
+  max-width: 500px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.modalContents {
+  padding-top: 20px;
+  height: 200px;
+}
+
+.modalContents p {
+  padding-top: 30px;
+  line-height: 200%;
+}
+
+/* ヒントボタン */
+.hintbtn {
+  padding: 1em;
+  margin: 1em;
+  border: 2px solid black;
+  background-color: lightgray;
+  color: black;
+}
+
+.hintbtn:hover {
+  background-color: #333;
+  color: white;
+}
