@@ -140,7 +140,6 @@ function correct() {
   $(".formIn").css("background", "tomato");
   $(".formIn").css("color", "white");
   $(".tweet").removeClass("loaded");
-  setTimeout(formBack, 1500);
 }
 function incorrect() {
   $(".formIn").val("INCORRECT!"); //不正解が出る
