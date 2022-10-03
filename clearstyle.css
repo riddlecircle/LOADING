@@ -147,3 +147,22 @@ footer div {
 .mondai {
   font-size: 20px;
 }
+
+
+/* シェア */
+.tweet a {
+  font-weight: bold;
+  padding: 0.8em 1.6em;
+  margin: 0.4em;
+  background-color: #00acee;
+  color: #fff;
+  text-decoration: none;
+  border-style: none;
+  border-radius: 5px;
+}
+.tweet a:hover {
+  opacity: 0.6;
+  transition: 1s;
+  color: #fff;
+}
+
