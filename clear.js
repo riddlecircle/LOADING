@@ -112,8 +112,9 @@ function loadChange7() {
   $("div.itemG").addClass("escape");
 }
 
+/* 一旦コメントアウト */
 /* 送信ボタンhover */
-formSend.addEventListener("mouseover", function () {
+/* formSend.addEventListener("mouseover", function () {
   $(".form_send").css("color", "white");
   $(".form_send").css("background", "#333");
 });
@@ -122,6 +123,7 @@ formSend.addEventListener("mouseleave", function () {
   $(".form_send").css("color", "black");
   $(".form_send").css("background", "lightgray");
 });
+ */
 
 //解答時挙動
 function allclear() {
