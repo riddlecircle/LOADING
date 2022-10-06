@@ -410,9 +410,9 @@ function countdown() {
       setTimeout(() => {
         countNum.textContent = 26;
       }, i * 170);
+      $("#countNum").prop("disabled", false);
     }
   }
-  $("#countNum").prop("disabled", false);
 }
 
 function colorchange() {
