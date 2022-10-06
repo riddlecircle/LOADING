@@ -6,6 +6,7 @@ window.onload = function () {
 
 //謎1プログレスバー----------
 function proc1() {
+  $(".select-item").prop("disabled", true);
   let progNum = document.getElementById("progNum"); //変数定義
   let prog = document.getElementById("prog");
   let contents = document.getElementById("contents");
@@ -27,6 +28,7 @@ function proc1() {
     hint1.addEventListener("click", hint11);
     hint2.addEventListener("click", hint12);
     hint3.addEventListener("click", hint13);
+    $(".select-item").prop("disabled", false);
   } else {
     prog.value++;
     progNum.innerHTML = prog.value;
@@ -40,6 +42,7 @@ let contents = document.getElementById("contents");
 const spinner = document.getElementById("prog_bar");
 //謎2プログレスバー----------
 function proc2() {
+  $(".select-item").prop("disabled", true);
   spinner.classList.remove("loaded");
   if (prog.value == 19 || prog.value == 39 || prog.value == 69) {
     prog.value++; //数値に1加算
@@ -61,6 +64,7 @@ function proc2() {
     hint1.addEventListener("click", hint21);
     hint2.addEventListener("click", hint22);
     hint3.addEventListener("click", hint23);
+    $(".select-item").prop("disabled", false);
   } else {
     prog.value++;
     progNum.innerHTML = prog.value;
@@ -69,6 +73,7 @@ function proc2() {
 }
 //謎3プログレスバー----------
 function proc3() {
+  $(".select-item").prop("disabled", true);
   spinner.classList.remove("loaded");
   if (prog.value == 9 || prog.value == 19) {
     prog.value++; //数値に1加算
@@ -90,6 +95,7 @@ function proc3() {
     hint1.addEventListener("click", hint31);
     hint2.addEventListener("click", hint32);
     hint3.addEventListener("click", hint33);
+    $(".select-item").prop("disabled", false);
   } else {
     prog.value++;
     progNum.innerHTML = prog.value;
@@ -98,6 +104,7 @@ function proc3() {
 }
 //謎4プログレスバー----------
 function proc4() {
+  $(".select-item").prop("disabled", true);
   spinner.classList.remove("loaded");
   if (
     prog.value == 39 ||
@@ -124,6 +131,7 @@ function proc4() {
     hint1.addEventListener("click", hint41);
     hint2.addEventListener("click", hint42);
     hint3.addEventListener("click", hint43);
+    $(".select-item").prop("disabled", false);
   } else {
     prog.value++;
     progNum.innerHTML = prog.value;
@@ -132,6 +140,7 @@ function proc4() {
 }
 //謎5プログレスバー----------
 function proc5() {
+  $(".select-item").prop("disabled", true);
   spinner.classList.remove("loaded");
   if (prog.value == 29 || prog.value == 79 || prog.value == 89) {
     prog.value++; //数値に1加算
@@ -153,6 +162,7 @@ function proc5() {
     hint1.addEventListener("click", hint51);
     hint2.addEventListener("click", hint52);
     hint3.addEventListener("click", hint53);
+    $(".select-item").prop("disabled", false);
   } else {
     prog.value++;
     progNum.innerHTML = prog.value;
