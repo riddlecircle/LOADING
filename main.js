@@ -401,6 +401,7 @@ function conChange6() {
 
 //謎2用-------------------
 function countdown() {
+  $("#countNum").prop("disabled", true);
   for (let i = 0; i < 26; i++) {
     setTimeout(() => {
       countNum.textContent = 26 - i;
@@ -411,11 +412,8 @@ function countdown() {
       }, i * 170);
     }
   }
+  $("#countNum").prop("disabled", false);
 }
-
-$("countNum").click(function () {
-  countdown();
-});
 
 function colorchange() {
   if (
